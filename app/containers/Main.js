@@ -1,4 +1,5 @@
 var React = require('react')
+var PromptContainer = require('./PromptContainer')
 
 var styles = {
   wrapper: {
@@ -20,6 +21,7 @@ function Main(props) {
     <div style={styles.wrapper}>
       <div style={styles.header}>
         <h1 style={{margin: 0}}>openweather.react</h1>
+        <PromptContainer direction='row' />
       </div>
       {props.children}
     </div>

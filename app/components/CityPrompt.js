@@ -15,8 +15,17 @@ function getStyles(props) {
 function CityPrompt(props) {
   return (
     <div style={getStyles(props)}>
-      <input type='text' value={props.value} onChange={props.onCityUpdate} className='form-control'/>
-      <button type='button' onClick={props.onCitySubmit} className='btn btn-success' style={{margin: 10}}>
+      <input 
+        type='text' 
+        value={props.value} 
+        placeholder='City, State'
+        onChange={props.onCityUpdate} 
+        className='form-control'/>
+      <button 
+        type='button' 
+        onClick={props.onCitySubmit} 
+        className='btn btn-success' 
+        style={{margin: 10}}>
         Weather Check
       </button>
     </div>

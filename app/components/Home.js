@@ -16,7 +16,6 @@ var styles = {
     color: 'white',
     fontWeight: 100,
     fontSize: 45
-
   }
 }
 

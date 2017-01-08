@@ -1,6 +1,7 @@
 var React = require('react')
-var CityPrompt = require('../components/CityPrompt')
 var PropTypes = React.PropTypes
+var CityPrompt = require('../components/CityPrompt')
+var helpers = require('../utils/helpers')
 
 var PromptContainer = React.createClass({
   getDefaultProps: function() {
@@ -22,7 +23,7 @@ var PromptContainer = React.createClass({
     })
   },
   handleCitySubmit: function(e) {
-    console.log(this.state.inputValue)
+    helpers.getCurrentWeather(this.state.inputValue)
   },
   render() {
     return (
