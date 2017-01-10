@@ -1,13 +1,15 @@
 var React = require('react')
 var PropTypes = React.PropTypes
 var CityPrompt = require('../components/CityPrompt')
-var helpers = require('../utils/helpers')
 
 var PromptContainer = React.createClass({
   getDefaultProps: function() {
     return {
       direction: 'column'
     }
+  },
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
   },
   propTypes : {
     direction: PropTypes.string
@@ -23,9 +25,9 @@ var PromptContainer = React.createClass({
     })
   },
   handleCitySubmit: function(e) {
-    helpers.getCurrentWeather(this.state.inputValue)
+    this.context.router.push('/forecast/' + this.state.inputValue)
   },
-  render() {
+  render: function() {
     return (
       <CityPrompt 
         direction={this.props.direction}

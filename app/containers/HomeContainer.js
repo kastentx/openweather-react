@@ -2,7 +2,7 @@ var React = require('react')
 var Home = require('../components/Home')
 
 var HomeContainer = React.createClass({
-  render() {
+  render: function() {
     return (
       <Home />
     )
